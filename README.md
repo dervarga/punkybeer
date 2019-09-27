@@ -5,7 +5,7 @@ It just renders the first 25 results from Punk API, the intention was to practic
 
 On mobile devices there might be some styling issues, especially with landscape orientation.
 
-You can check it on Heroku: [punkybeer.herokuapp.com](punkybeer.herokuapp.com)
+You can check it on Heroku: https://punkybeer.herokuapp.com
 
 
 
