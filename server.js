@@ -9,13 +9,13 @@ const gd = require('./utils/getData');
 const apiUrl = "https://api.punkapi.com/v2/beers";
 const apiUrlRandom = "https://api.punkapi.com/v2/beers/random"
 
-app.use(express.static(__dirname));
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(__dirname + "/public"));
+app.use(express.static(path.join(__dirname +"/public", 'build')));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.get("/", (req,res)=>{
+app.get("/beers", (req,res)=>{
     console.log(req);
     gd.getData(apiUrl, (err, rslt)=>{
         if (err) {
@@ -26,7 +26,7 @@ app.get("/", (req,res)=>{
 })
 
 app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'build', +"/public/index.html"));
   });
 
 

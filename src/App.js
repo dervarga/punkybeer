@@ -8,7 +8,7 @@ function App(props) {
   const [results, setResults] = useState([]);
 
   useEffect(()=>{
-    axios.get("/").then(rslt=>{
+    axios.get("/beers").then(rslt=>{
       console.log("initial query result", rslt);
       setResults(rslt.data);      
     }).catch(err=>{
