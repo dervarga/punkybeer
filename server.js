@@ -8,7 +8,7 @@ const port = process.env.PORT || 3001;
 const gd = require('./utils/getData');
 
 const apiUrl = "https://api.punkapi.com/v2/beers";
-const apiUrlRandom = "https://api.punkapi.com/v2/beers/random"
+// const apiUrlRandom = "https://api.punkapi.com/v2/beers/random"
 
 app.use(cors());
 
