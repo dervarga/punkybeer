@@ -12,8 +12,8 @@ const apiUrlRandom = "https://api.punkapi.com/v2/beers/random"
 
 app.use(cors());
 
-app.use(express.static(__dirname + "/public"));
-app.use(express.static(path.join(__dirname +"/public", 'build')));
+app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'build')));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
@@ -29,7 +29,7 @@ app.get("/beers", (req,res)=>{
 })
 
 app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname, 'build', +"/public/index.html"));
+    res.sendFile(path.join(__dirname, 'build', "index.html"));
   });
 
 
