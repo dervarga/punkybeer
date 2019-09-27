@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -8,6 +9,8 @@ const gd = require('./utils/getData');
 
 const apiUrl = "https://api.punkapi.com/v2/beers";
 const apiUrlRandom = "https://api.punkapi.com/v2/beers/random"
+
+app.use(cors());
 
 app.use(express.static(__dirname + "/public"));
 app.use(express.static(path.join(__dirname +"/public", 'build')));
