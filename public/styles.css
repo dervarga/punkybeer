@@ -178,6 +178,8 @@ a {
 }
 
 @media screen and (max-width: 600px) {
+    /* On phone I had problem with scroll, so I changed
+    the styling a bit */
     .result {
     position: relative;
     top: 0;
@@ -189,8 +191,8 @@ a {
         background-attachment: initial;
     }
 }
-
-@media only screen and (orientation: landscape) and (max-width: 750px) {
+/* Landscape version is still not 100% okay */
+@media screen and (orientation: landscape) and (max-width: 750px) {
     /* .result-text-container {
         font-size: 8px;
     } */
