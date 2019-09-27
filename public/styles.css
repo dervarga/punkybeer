@@ -177,6 +177,19 @@ a {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .result {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0,0);
+    }
+
+    .result-container {
+        background-attachment: initial;
+    }
+}
+
 @media only screen and (orientation: landscape) and (max-width: 750px) {
     /* .result-text-container {
         font-size: 8px;
@@ -189,9 +202,6 @@ a {
         width: 75px;
     }
     .result-container {
-        background:rgba(240, 236, 236, 0.6);
-        /* background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover; */
+        /* background:rgba(240, 236, 236, 0.6); */
     }
 }
